@@ -8,10 +8,14 @@ const n2 = 15;
 const n3 = 20;
 const n4 = 5;
 
+let nums = [n1, n2, n3, n4]
+
 // Check one: add up to 50
 // This is a fairly simple operation using
 // arithmetic operators and a comparison.
 const isSum50 = (n1 + n2 + n3 + n4) == 50;
+
+
 
 // Check two: at least two odd numbers
 // Here, we use modulus to check if something is odd.
@@ -40,6 +44,18 @@ const isValid = isSum50 && isTwoOdd && !isOver25 && isUnique;
 console.log(isValid);
 
 let mod ='some modification'
+
+const isDivisibleBy5 = (n1 % 5) + (n2 % 5) + (n3 % 5) + (n4 % 5) === 0 
+
+let lastNum = nums[nums.length - 1]
+let firstNum = nums[0]
+let firstNumLgrThanLast = firstNum > lastNum
+let thirdCheck = (((nums[1] - nums[0]) * nums[2]) % nums[3]) 
+let isOver25Alt = "no need to do this right now"
+
+console.log(`All numbers are divisible by 5: ${isDivisibleBy5}`);
+console.log(`The first number is larger is larger than the last: ${firstNumLgrThanLast}`)
+console.log(`An arithmetic chain with several operations should evaluate to zero after the colon: ${thirdCheck}`)
 
 // Here's another example of how this COULD be done,
 // but it SHOULD NOT be done this way. As programmers,
